@@ -1,0 +1,48 @@
+.container {
+    font-family: sans-serif;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-image: url('https://blog.way.com/wp-content/uploads/2021/09/Spooky-abandoned-parking-lot-1-scaled.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-container{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.194);
+    border-radius: 20%;
+    padding: 2em;
+
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.main-title {
+    margin-top: 1rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #f1f1f1; 
+}
+
+@media (min-width: 640px) {
+    .main-title {
+        font-size: 3rem; 
+    }
+}
+
+.description {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: #ffffff; 
+}

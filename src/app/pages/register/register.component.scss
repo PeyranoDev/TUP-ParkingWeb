@@ -1,0 +1,116 @@
+.branding-title, .login-title, .login-form-group label, .login-input, .login-button, .register-link {
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+    background-image: url('https://blog.way.com/wp-content/uploads/2021/09/Spooky-abandoned-parking-lot-1-scaled.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.branding-box {
+    margin-left: 8rem; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.181);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 2em;
+}
+
+.branding-title {
+    font-size: 6rem; 
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.login-box {
+    background-color: rgba(0, 0, 0, 0.181);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transform: translateX(50px); 
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-group {
+    margin-bottom: 20px;
+}
+
+.login-form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5c67f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #4a55d4;
+}
+
+.register-option {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.register-link {
+    color: #5c67f2;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #4a55d4;
+}
+
+.error-message {
+    color: red;  
+    font-size: 12px;
+    margin-top: 5px;
+}

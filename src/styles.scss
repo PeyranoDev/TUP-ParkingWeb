@@ -1,0 +1,65 @@
+@import "../public/variables.scss";
+
+body  {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+.link-activo {
+  color: $color-non-photo-blue;
+  font-weight: bold;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: $color-uranian-blue;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.flex-apart{
+  display: flex;
+  justify-content: space-between;
+}
+
+.boton-resaltado{
+  background-color: $color-deep-aqua;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-column-center{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.button:hover {
+  background-color: $color-non-photo-blue;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.181);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

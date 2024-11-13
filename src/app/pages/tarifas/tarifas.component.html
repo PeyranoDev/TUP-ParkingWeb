@@ -1,0 +1,34 @@
+<main class="flex-column-center">
+    <div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Id Tarifa </th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (tarifa of this.dataTarifaService.tarifas; track $index) {
+                <tr>
+                    <td>
+                        {{ tarifa.id }}
+                    </td>
+                    <td>
+                        {{ tarifa.descripcion }}
+                    </td>
+                    <td>
+                        {{ tarifa.valor }}
+                    </td>
+                    <td class="acciones-container">
+                        <button (click)="preguntarCambiarTarifa(tarifa.id)" >
+                            <img src="../../../assets/img/icons/edit.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</main>

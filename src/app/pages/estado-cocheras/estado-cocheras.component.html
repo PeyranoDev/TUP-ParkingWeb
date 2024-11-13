@@ -1,0 +1,61 @@
+<main class="flex-column-center">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Disponibilidad</th>
+                    <th>Ingreso</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (cochera of dataCocherasService.cocheras; track $index) {
+                    <tr>
+                        <td>{{ cochera.id }}</td>
+                        <td>
+                            @if (cochera.deshabilitada) {
+                                <button class="deshabilitada">
+                                    Deshabilitada
+                                </button>
+                            } @else if (!cochera.estacionamiento?.horaEgreso && cochera.estacionamiento?.horaIngreso) {
+                                <button (click)="cerrarEstacionamiento(cochera)">
+                                    {{ cochera.estacionamiento?.patente }}
+                                </button>
+                            } @else {
+                                <button class="disponible" (click)="abrirEstacionamiento(cochera.id)">
+                                    Disponible
+                                </button>
+                            }
+                        </td>
+                        <td>{{ cochera.descripcion }}</td>
+                        <td class="acciones-container">
+                            @if (!cochera.estacionamiento?.patente) {
+                                @if (!cochera.deshabilitada) {
+                                    <button (click)="preguntarDeshabilitarCochera(cochera.id)" class="btn">
+                                        <img src="assets/img/icons/prohibido.png" alt="Deshabilitar cochera">
+                                    </button>
+                                } @else {
+                                    <button (click)="preguntarHabilitarCochera(cochera.id)" class="btn">
+                                        <img src="assets/img/icons/ok.png" alt="Habilitar cochera">
+                                    </button>
+                                }
+                                @if (esAdmin) {
+                                    <button (click)="preguntarBorrarCochera(cochera.id)" class="btn">
+                                        <img src="assets/img/icons/contenedor-de-basura.png" alt="Eliminar cochera">
+                                    </button>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @if (esAdmin) {
+        <div class="button-container">
+            <button (click)="preguntarAgregarCochera()" class="boton-resaltado" id="agregar-cochera">+</button>
+        </div>
+    }
+</main>

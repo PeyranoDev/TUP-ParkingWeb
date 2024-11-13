@@ -1,0 +1,16 @@
+@use "./../../../../public/styles/tablas.scss";
+
+h1{
+    color: red;
+}
+
+#agregar-cochera{
+    margin: auto;
+}
+
+table{
+    thead, tr {
+        grid-template-columns: 90px 1fr 1fr 1fr;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,29 @@
+<header class="navbar">
+    <nav class="container">
+      <div class="main-title-container">
+        <span class="main-title">PARKING APP</span>
+      </div>
+      
+      
+      <div class="desktop-links">
+        <a [routerLink]="['/estado-cocheras']" routerLinkActive="nav-link-active" class="nav-link">Cocheras</a>
+        @if (this.usuario.esAdmin) {
+          <a [routerLink]="['/reportes']" routerLinkActive="nav-link-active" class="nav-link">Reportes</a>
+          <a [routerLink]="['/tarifas']" routerLinkActive="nav-link-active" class="nav-link">Tarifas</a>
+        }
+      </div>
+
+      <div class="user-section">
+        <span class="username">Bienvenido! {{ this.usuario.username.toUpperCase() }}</span>
+        <button type="button" class="profile-button" (click)="toggleSignoutMenu()">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="User Profile" class="profile-img" />
+        </button>
+
+        <div class="signout-menu" [class.hidden]="!isSignoutMenuVisible">
+          <span (click)="logout()" class="signout-link">Cerrar Sesión</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<router-outlet/>
